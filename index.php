@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<?php 
+include "backend/connection.php";
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

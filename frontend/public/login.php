@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/style.css">
     <title>Login</title>
 </head>
 <body>
@@ -11,7 +12,7 @@
             <a href="#">Logo</a>
         </div>
         <div class="account">
-            <a href="landing.php">Home</a>
+            <a href="/schoolsystem/index.php">Home</a>
         </div>
     </div>
     <div class="landing-navigation">
@@ -26,16 +27,17 @@
     </div>
     <div class="main">
         <div class="login">
-            <form action="landing.php" method="post">
+            
+            <form action="/schoolsystem/backend/userin.php" method="post">
                 <div>
-                    <label for="username">Username</label>
-                    <input type="text" class="text">
+                    <label for="username" >Username</label>
+                    <input type="text" name="username" class="text">
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" class="password">
+                    <input type="password" name="password" class="password">
                 </div>
-                <input type="submit" value="login">
+                <input type="submit" value="login" name="login">
             </form>
         </div>
     </div>

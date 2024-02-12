@@ -7,11 +7,11 @@
 </head>
 <body>
     <div class="landing-header">
-        <div class="public/landing-logo">
-            <a href="#">Logo</a>
+        <div class="landing-logo">
+            <a href="/schoolsystem/index.php">Logo</a>
         </div>
         <div class="account">
-            <a href="login.php">LogIn</a>
+            <a href="frontend/public/login.php">LogIn</a>
         </div>
     </div>
     <div class="landing-navigation">
