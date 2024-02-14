@@ -29,6 +29,12 @@
         <div class="login">
             
             <form action="/schoolsystem/backend/userin.php" method="post">
+
+            <?php if (isset($_GET['error'])) { ?>
+
+            <p class="error"><?php echo $_GET['error']; ?></p>
+
+            <?php } ?>
                 <div>
                     <label for="username" >Username</label>
                     <input type="text" name="username" class="text">

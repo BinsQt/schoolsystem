@@ -10,9 +10,6 @@ session_start();
 </head>
 <body>
 
-<h1>Hi Admin</h1>
-<?php 
-print_r($_SESSION);
-?>
+<h1>Hi Teacher</h1>
 </body>
 </html>

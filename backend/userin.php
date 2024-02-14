@@ -1,23 +1,49 @@
-
-
 <?php
+session_start();
 
-include "connection.php";
-            $msg = '';
-            
-            if (isset($_POST['login']) && !empty($_POST['username']) 
-               && !empty($_POST['password'])) {
-				
-               if ($_POST['username'] == 'tutorialspoint' && 
-                  $_POST['password'] == '1234') {
-                  $_SESSION['valid'] = true;
-                  $_SESSION['timeout'] = time();
-                  $_SESSION['username'] = 'tutorialspoint';
-                  
-                  echo 'You have entered valid use name and password';
-                  header('location: /schoolsystem/index.php');
-               }else {
-                  $msg = 'Wrong username or password';
+include("./connection.php");
+
+if (isset($_POST['username']) && isset($_POST['password'])) {
+
+   $uname = $_POST['username'];
+   $pword = $_POST['password'];
+   
+
+   if (empty($uname && $pword)) {
+      header("Location: /index.php?error=Insert username and password");
+
+      exit();
+
+   } elseif (!empty($uname && $pword)) {
+
+      $sql = "SELECT * FROM admin where username = '$uname' and password = '$pword'";
+
+      $result = mysqli_query($conn, $sql);
+
+      if (mysqli_num_rows($result) === 1) {
+         $row = mysqli_fetch_assoc($result);
+
+         if ($row['username'] === $uname && $row['password'] === $pword) {
+
+               $_SESSION['username'] = $row['username'];
+
+               $_SESSION['fullname'] = $row['fullname'];
+   
+               $_SESSION['aid'] = $row['aid'];
+
+               $position = $row['position'];
+
+               if ($position == 1) {
+                  header("Location: /schoolsystem/frontend/admin/adminDashboard.php");
+               } elseif ($position == 2) {
+                  header("Location: /schoolsystem/frontend/teacher/teacherDashboard.php");
+               } else {
+                  header("Location: /schoolsystem/frontend/student/studentDashboard.php");
                }
-            }
-         ?>
+               exit();
+         }
+      }
+   }
+}
+
+?>
