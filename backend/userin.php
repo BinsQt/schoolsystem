@@ -10,7 +10,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
    
 
    if (empty($uname && $pword)) {
-      header("Location: /index.php?error=Insert username and password");
+      header("Location: /schoolsystem//frontend/public/login.php?error=Insert username and password");
 
       exit();
 

@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend/style.css">
     <title>School Name</title>
 </head>
 <body>
     <div class="landing-header">
-        <div class="landing-logo">
-            <a href="/schoolsystem/index.php">Logo</a>
-        </div>
-        <div class="account">
-            <a href="frontend/public/login.php">LogIn</a>
+        <div class="landing-container">
+            <div class="landing-logo">
+                <a href="/schoolsystem/index.php">
+                    <img src="frontend\img\logo1.png" alt="school-logo" class="school-logo">
+                </a>
+            </div>
+            <div class="account">
+                <a href="frontend/public/login.php" class="login-button">LogIn</a>
+            </div>
         </div>
     </div>
     <div class="landing-navigation">
