@@ -1,10 +1,10 @@
-<nav class="nav">
-<div>
-    <a href=""><h1>School Name</h1></a>
+<div class="qoute">
+    <p>"Education is not preparation for life; education is life itself." —John Dewey</p>
 </div>
-<div>
-    <a href="#" class="aNav">About</a>
-    <a href="#" class="aNav">Contact Us</a>
-    <a href="#" class="aNav">Help</a>
-</div>
-</nav>
+
+<ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/services.html">Services</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+</ul>

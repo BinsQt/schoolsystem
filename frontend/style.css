@@ -3,42 +3,118 @@
     margin: 0;
     background-color:#f9f9f9;
     color: #1f1f1f;
+    box-sizing: border-box;
 }
 
 
 .landing-header {
+    margin-top: 0.5em;
     width:100%;
+
+
+    .landing-container {
+        display: flex;
+        margin: 0 1em 0 1em;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        border-bottom: 1px rgba(87, 87, 87, 0.411) solid;
+        padding: 0.3em 0;
+
+        .account {
+            width: 200px;
+        }
+
+        .login-button {
+        text-decoration: none;
+        float: right;
+            }
+    
+        .landing-logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            max-width: 12em;
+            max-height: auto;
+        }
+
+        label {
+            text-wrap: nowrap;
+        }
+        
+        .school-logo {
+            width: 80%;
+        }
+        
+    }
+    
+
     
 }
 
-.landing-container {
+nav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.login-button {
-    text-decoration: none;
-}
-
-.landing-logo {
-    max-width: 10vw;
-    max-height: auto;
-}
-
-.school-logo {
-    width: 100%;
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    background-color: blue;
-}
+    align-items: center;
+    min-height: 8vh;
+    font-family: "Montserrat", sans-serif;
+    
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 25%;
 
-.aNav {
-    background-color: transparent;
+        li {
+            list-style: none;
+          }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover:not(.active) {
+
+            background-color: lightseagreen;
+          
+          }
+          
+        li a.active {
+          
+            background-color: #4caf50;
+          
+          }
+    }
+  }
+
+.main {
+    border: 1px solid black;
+    width: 80vw;
+    height: 70vh;
+    margin: auto;
+    padding: auto;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        height: 100%;
+        overflow: hidden;
+        padding: 1em;
+
+
+        .card-ad {
+            border: 1px solid black;
+            width: 80%;
+            height: 100%;
+
+        }
+
+        .enroll {
+            border: 1px solid black;
+            width: 20%;
+            height: 100%;
+ 
+        }
+    }
 }

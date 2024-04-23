@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-
-<?php 
-include "backend/connection.php";
-?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,12 +7,7 @@ include "backend/connection.php";
     <title>School Name</title>
 </head>
 <body>
-    <div class="landing">
-        <?php 
-            include 'frontend/public/landing.php'
-        ?>
-    </div>
-
-    
+    <?php 
+        include('frontend/public/landing.php');    ?>
 </body>
-</html>`
+</html>
