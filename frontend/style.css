@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+h1,h2,h3,h4,h5,h6, p{
+    background-color: transparent;
+}
+
+
 
 .landing-header {
     margin-top: 0.5em;
@@ -89,7 +94,7 @@ nav {
 
 .main {
     border: 1px solid black;
-    width: 80vw;
+    width: 90vw;
     height: 70vh;
     margin: auto;
     padding: auto;
@@ -99,7 +104,7 @@ nav {
         flex-direction: row;
         gap: 1em;
         height: 100%;
-        overflow: hidden;
+        /* overflow: hidden; */
         padding: 1em;
 
 
@@ -107,13 +112,35 @@ nav {
             border: 1px solid black;
             width: 80%;
             height: 100%;
-
+            
         }
 
         .enroll {
-            border: 1px solid black;
-            width: 20%;
-            height: 100%;
+                border: 1px solid black;
+                width: 20%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                overflow:hidden ;
+                
+                .header-enroll {
+                    font-size: 2rem;
+                }
+
+                
+                .header-enroll, .footer-enroll {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100px;
+                    background-color: #0099ff;
+                    border: #0099ff 1px solid;
+
+                }
+
  
         }
     }
